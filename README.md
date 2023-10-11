@@ -61,6 +61,9 @@ Prerequisites
 
 The current version of Deepgaze is based on **Python 2.7**, a porting for Python 3.0 has been scheduled for the next year.
 
+(Recommended) Create a Python virtual environment:
+You can follow the [Python official documentation](https://docs.python.org/3/tutorial/venv.html) for virtual environments .
+
 To use the libray you have to install:
 
 - Numpy [[link]](http://www.numpy.org/)
