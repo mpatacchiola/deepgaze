@@ -95,9 +95,9 @@ class FasaSaliencyMapping:
         # self.histogram, edges = np.histogramdd(data, bins=tot_bins)
 
         # Get flatten index ID of the image pixels quantized
-        image_indeces = np.vstack((self.image_quantized[:,:,0].flat,
-                                   self.image_quantized[:,:,1].flat,
-                                   self.image_quantized[:,:,2].flat)).astype(np.int32)
+        image_indeces = np.vstack((self.image_quantized[:, :, 0].flat,
+                                   self.image_quantized[:, :, 1].flat,
+                                   self.image_quantized[:, :, 2].flat)).astype(np.int32)
         image_linear = np.ravel_multi_index(image_indeces, (tot_bins, tot_bins, tot_bins))  # in range [0,7]
         # image_linear = np.reshape(image_linear, (self.image_rows, self.image_cols))
         # Getting the linear ID index of unique colours
@@ -266,7 +266,7 @@ class FasaSaliencyMapping:
             it.iternext()
 
         if DEBUG: end = timer()
-        # ret, self.salient_image = cv2.threshold(self.salient_image, 150, 255, cv2.THRESH_BINARY)
+        #ret, self.salient_image = cv2.threshold(self.salient_image, 150, 255, cv2.THRESH_BINARY)
         if DEBUG: print("--- %s returnMask 'iteration part' seconds ---" % (end - start))
         return self.salient_image
 
